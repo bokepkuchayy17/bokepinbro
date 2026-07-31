@@ -1,0 +1,57 @@
+body {
+  margin:0;
+  background:#0f0a1e;
+  color:white;
+  font-family:Arial;
+}
+
+.nav {
+  display:flex;
+  justify-content:space-between;
+  padding:10px;
+  background:#1a1433;
+}
+
+.logo {
+  font-weight:bold;
+}
+
+.container {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  padding:10px;
+}
+
+.card {
+  background:#1c1633;
+  border-radius:10px;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.card img {
+  width:100%;
+}
+
+.title {
+  padding:10px;
+  font-size:14px;
+}
+
+/* modal */
+.modal {
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:black;
+  justify-content:center;
+  align-items:center;
+}
+
+.modal video {
+  width:90%;
+}
