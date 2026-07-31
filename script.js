@@ -2,7 +2,7 @@ const videos = [
   {
     title: "main bertiga emang paling enak",
     thumb: "https://ik.imagekit.io/7cynulshf/IMG_20260413_171315.jpg?updatedAt=1776071764733",
-    src: "https://tv1.indoav.app/e/bqDoEXoFUgSx"
+    src: "https://streamtape.com/v/2geYa1AYOZcZlVv/Om_Kaya_Boking_ABG_di_Hotel.mp4"
   },
   {
     title: "ngewe bocil di kos",
