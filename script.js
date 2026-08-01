@@ -2,7 +2,7 @@ const videos = [
   {
     id:1,
     title:"bocil sange di ewe pacar",
-    src:"https://streamtape.com/v/2geYa1AYOZcZlVv/Om_Kaya_Boking_ABG_di_Hotel.mp4",
+    src:"https://streamtape.com/e/2geYa1AYOZcZlVv/?autoplay=1&muted=1",
     thumb:"https://ik.imagekit.io/7cynulshf/IMG_20260413_205831.jpg?updatedAt=1776085358245"
   },
   {
