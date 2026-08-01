@@ -242,4 +242,16 @@ button:hover{
   .seo-section{
   border-top:1px solid #222;
   }
+
+  .seo-section {
+  padding: 15px;
+  border-top: 1px solid #222;
+}
+
+.seo-section h1 {
+  font-size: 15px;
+  font-weight: 500;
+  color: #ccc;
+  margin: 0;
+  }
 }
