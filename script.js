@@ -83,7 +83,7 @@ function render(){
   videos.slice(start,end).forEach(v=>{
     list.innerHTML+=`
       <div class="card" onclick="location.href='watch.html?id=${v.id}'">
-        <img src="${v.thumb}">
+        <img src="${v.thumb}" loading="lazy">
         <div class="title">${v.title}</div>
         <div class="views" id="views${v.id}">
           ${formatViews(getViews(v.id))}
@@ -135,7 +135,7 @@ if(id){
     if(v.id!=id){
       sidebar.innerHTML+=`
         <div class="video-card" onclick="location.href='watch.html?id=${v.id}'">
-          <img src="${v.thumb}">
+          <img src="${v.thumb}" loading="lazy">
           <div>
             <div>${v.title}</div>
             <div class="views">${formatViews(getViews(v.id))}</div>
