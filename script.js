@@ -3,43 +3,43 @@ const videos = [
     id:1,
     title:"bocil sange di ewe pacar",
     src:"https://mixdrop.top/e/z1pj89erinzlqq",
-    thumb:"https://ik.imagekit.io/7cynulshf/20260801_142030.jpg"loading="lazy">
+    thumb:"https://ik.imagekit.io/7cynulshf/20260801_142030.jpg" loading="lazy">
   },
   {
     id:2,
     title:"abg montok pink",
     src:"https://www.youtube.com/embed/3JZ_D3ELwOQ",
-    thumb:"https://ik.imagekit.io/7cynulshf/IMG_20260413_171315.jpg?updatedAt=1776071764733"loading="lazy">
+    thumb:"https://ik.imagekit.io/7cynulshf/IMG_20260413_171315.jpg?updatedAt=1776071764733" loading="lazy">
   },
   {
     id:3,
     title:"bocil memek pink",
     src:"https://www.youtube.com/embed/tgbNymZ7vqY",
-    thumb:"https://ik.imagekit.io/7cynulshf/IMG_20260413_171243.jpg?updatedAt=1776071764729"loading="lazy">
+    thumb:"https://ik.imagekit.io/7cynulshf/IMG_20260413_171243.jpg?updatedAt=1776071764729" loading="lazy">
   },
   {
     id:4,
     title:"bocil memek pink",
     src:"https://www.youtube.com/embed/tgbNymZ7vqY",
-    thumb:"https://ik.imagekit.io/7cynulshf/IMG_20260413_205831.jpg?updatedAt=1776085358245"loading="lazy">
+    thumb:"https://ik.imagekit.io/7cynulshf/IMG_20260413_205831.jpg?updatedAt=1776085358245" loading="lazy">
   },
   {
     id:5,
     title:"bocil memek pink",
     src:"https://www.youtube.com/embed/tgbNymZ7vqY",
-    thumb:"https://ik.imagekit.io/7cynulshf/IMG_20260413_205831.jpg?updatedAt=1776085358245"loading="lazy">
+    thumb:"https://ik.imagekit.io/7cynulshf/IMG_20260413_205831.jpg?updatedAt=1776085358245" loading="lazy">
   },
   {
     id:6,
     title:"bocil memek pink",
     src:"https://www.youtube.com/embed/tgbNymZ7vqY",
-    thumb:"https://ik.imagekit.io/7cynulshf/IMG_20260413_205831.jpg?updatedAt=1776085358245"loading="lazy">
+    thumb:"https://ik.imagekit.io/7cynulshf/IMG_20260413_205831.jpg?updatedAt=1776085358245" loading="lazy">
   },
   {
     id:7,
     title:"bocil memek pink",
     src:"https://www.youtube.com/embed/tgbNymZ7vqY",
-    thumb:"https://ik.imagekit.io/7cynulshf/IMG_20260413_205831.jpg?updatedAt=1776085358245"loading="lazy">
+    thumb:"https://ik.imagekit.io/7cynulshf/IMG_20260413_205831.jpg?updatedAt=1776085358245" loading="lazy">
   },
 ];
 
