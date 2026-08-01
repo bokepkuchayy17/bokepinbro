@@ -2,7 +2,7 @@ const videos = [
   {
     id:1,
     title:"bocil sange di ewe pacar",
-    src:"https://filemoon.org/embed/LK0G1M0jG917/file",
+    src:"https://mixdrop.top/e/z1pj89erinzlqq",
     thumb:"https://ik.imagekit.io/7cynulshf/20260801_142030.jpg"
   },
   {
