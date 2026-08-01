@@ -26,7 +26,7 @@ const videos = [
   {
     id:5,
     title:"bocil memek pink",
-    src:"https://www.youtube.com/embed/tgbNymZ7vq
+    src:"https://www.youtube.com/embed/tgbNymZ7vq",
     thumb:"https://ik.imagekit.io/7cynulshf/IMG_20260413_205831.jpg?updatedAt=1776085358245"
   },
   {
