@@ -2,7 +2,7 @@ const videos = [
   {
     id:1,
     title:"bocil sange di ewe pacar",
-    src:"https://playmogo.com/e/cp5vdjyx08l4",
+    src:"https://filemoon.org/embed/LK0G1M0jG917/file",
     thumb:"https://ik.imagekit.io/7cynulshf/20260801_142030.jpg"
   },
   {
