@@ -2,8 +2,8 @@ const videos = [
   {
     id:1,
     title:"bocil sange di ewe pacar",
-    src:"https://streamtape.com/e/2geYa1AYOZcZlVv/?autoplay=1&muted=1",
-    thumb:"https://ik.imagekit.io/7cynulshf/IMG_20260413_205831.jpg?updatedAt=1776085358245"
+    src:"https://streamtape.com/embed/2geYa1AYOZcZlVv/",
+    thumb:"https://ik.imagekit.io/7cynulshf/"
   },
   {
     id:2,
