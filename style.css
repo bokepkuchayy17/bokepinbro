@@ -274,14 +274,3 @@ button:hover{
     transform: translateY(0);
   }
 }
-
-  .ads-banner img {
-  width: 100%;
-  max-width: 200px; /* biar nggak kegedean di desktop */
-  height: 100vh; /* full tinggi layar */
-  max-height: 400px;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
-  border-radius: 12px;
-  }
