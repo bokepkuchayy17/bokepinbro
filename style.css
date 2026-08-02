@@ -282,7 +282,7 @@ button:hover{
 
 .ads-banner img{
   width: 70%;
-  max-height: 90px;
+  max-height: 95px;
   object-fit: cover;
   border-radius: 8px;
 }
