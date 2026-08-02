@@ -277,9 +277,9 @@ button:hover{
 
   .ads-banner img {
   width: 100%;
-  max-width: 80px; /* biar nggak kegedean di desktop */
+  max-width: 200px; /* biar nggak kegedean di desktop */
   height: 100vh; /* full tinggi layar */
-  max-height: 1920px;
+  max-height: 400px;
   object-fit: cover;
   display: block;
   margin: 0 auto;
