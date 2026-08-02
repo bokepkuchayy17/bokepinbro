@@ -25,9 +25,9 @@ const videos = [
   },
   {
     id:5,
-    title:"bocil memek pink",
-    src:"https://www.youtube.com/embed/tgbNymZ7vq",
-    thumb:"https://ik.imagekit.io/7cynulshf/IMG_20260413_205831.jpg?updatedAt=1776085358245"
+    title:"abg perawan di unboxing",
+    src:"https://mxdrop.sx/e/dkqrndpwa83r09",
+    thumb:"https://ik.imagekit.io/7cynulshf/20260802_130421.jpg?updatedAt=1785647164962"
   },
   {
     id:6,
