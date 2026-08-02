@@ -275,14 +275,21 @@ button:hover{
   }
 }
 
-  .ads-banner{
-  margin: 15px;
+  .ads-banner {
+  width: 100%;
+  display: block;
   text-align: center;
+  margin: 15px auto;
 }
 
-.ads-banner img{
+.ads-banner a {
+  display: inline-block;
   width: 100%;
-  max-height: 90px;
-  object-fit: cover;
-  border-radius: 8px;
+}
+
+.ads-banner img {
+  width: 100%;
+  max-width: 728px;
+  display: block;
+  margin: 0 auto;
 }
