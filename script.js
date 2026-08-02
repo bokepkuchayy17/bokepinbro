@@ -19,9 +19,9 @@ const videos = [
   },
   {
     id:4,
-    title:"bocil memek pink",
-    src:"https://www.youtube.com/embed/tgbNymZ7vqY",
-    thumb:"https://ik.imagekit.io/7cynulshf/IMG_20260413_205831.jpg?updatedAt=1776085358245"
+    title:"dua bocil imut nyoba ngewe",
+    src:"https://mxdrop.sx/e/03vzkjvgtko1l9e",
+    thumb:"https://ik.imagekit.io/7cynulshf/20260802_125408.jpg"
   },
   {
     id:5,
