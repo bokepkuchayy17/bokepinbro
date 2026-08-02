@@ -275,14 +275,13 @@ button:hover{
   }
 }
 
-  .ads-banner{
-  margin: 15px;
-  text-align: center;
-}
-
-.ads-banner img{
-  width: 70%;
-  max-height: 0px;
+  .ads-banner img {
+  width: 100%;
+  max-width: 400px; /* biar nggak kegedean di desktop */
+  height: 100vh; /* full tinggi layar */
+  max-height: 1920px;
   object-fit: cover;
-  border-radius: 8px;
-}
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  }
