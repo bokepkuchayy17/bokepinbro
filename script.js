@@ -1,18 +1,18 @@
 const videos = [
   {
-    id:1,
+    id:7,
     title:"pasrah aja di ewe gurunya",
     src:"https://mixdrop.top/e/z1pj89erinzlqq",
     thumb:"https://ik.imagekit.io/7cynulshf/20260801_142030.jpg"
   },
   {
-    id:2,
+    id:6,
     title:"main bertiga emang paling enak",
     src:"https://tv1.indoav.app/e/bqDoEXoFUgSx",
     thumb:"https://ik.imagekit.io/7cynulshf/20260802_110017.jpg"
   },
   {
-    id:3,
+    id:5,
     title:"bocil chindo polos tpi hyper",
     src:"https://mxdrop.sx/e/1nvow49vs1le91",
     thumb:"https://ik.imagekit.io/7cynulshf/20260802_122530.jpg"
@@ -24,19 +24,19 @@ const videos = [
     thumb:"https://ik.imagekit.io/7cynulshf/20260802_125408.jpg"
   },
   {
-    id:5,
+    id:3,
     title:"abg perawan di unboxing",
     src:"https://mxdrop.sx/e/dkqrndpwa83r09",
     thumb:"https://ik.imagekit.io/7cynulshf/20260802_130421.jpg?updatedAt=1785647164962"
   },
   {
-    id:6,
+    id:2,
     title:"part 2 bocil imut dua lawan satu ",
     src:"https://mxdrop.sx/e/dkqrnd43hvz0v0",
     thumb:"https://ik.imagekit.io/7cynulshf/20260802_225050.jpg"
   },
   {
-    id:7,
+    id:1,
     title:"bocil memek pink",
     src:"https://www.youtube.com/embed/tgbNymZ7vqY",
     thumb:"https://ik.imagekit.io/7cynulshf/IMG_20260413_205831.jpg?updatedAt=1776085358245"
