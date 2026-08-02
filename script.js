@@ -14,7 +14,7 @@ const videos = [
   {
     id:3,
     title:"bocil chindo polos tpi hyper",
-    src:"https://www.youtube.com/embed/tgbNymZ7vqY",
+    src:"https://mxdrop.sx/e/1nvow49vs1le91",
     thumb:"https://ik.imagekit.io/7cynulshf/20260802_122530.jpg"
   },
   {
