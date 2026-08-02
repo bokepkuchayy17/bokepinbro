@@ -1,33 +1,33 @@
 const videos = [
   {
     id:1,
-    title:"pasrah aja di ewe gurunya",
+    title:"bocil sange di ewe pacar",
     src:"https://mixdrop.top/e/z1pj89erinzlqq",
     thumb:"https://ik.imagekit.io/7cynulshf/20260801_142030.jpg"
   },
   {
     id:2,
-    title:"main bertiga emang paling enak",
-    src:"https://tv1.indoav.app/e/bqDoEXoFUgSx",
-    thumb:"https://ik.imagekit.io/7cynulshf/20260802_110017.jpg"
+    title:"abg montok pink",
+    src:"https://www.youtube.com/embed/3JZ_D3ELwOQ",
+    thumb:"https://ik.imagekit.io/7cynulshf/IMG_20260413_171315.jpg?updatedAt=1776071764733"
   },
   {
     id:3,
-    title:"bocil chindo polos tpi hyper",
-    src:"https://mxdrop.sx/e/1nvow49vs1le91",
-    thumb:"https://ik.imagekit.io/7cynulshf/20260802_122530.jpg"
+    title:"bocil memek pink",
+    src:"https://www.youtube.com/embed/tgbNymZ7vqY",
+    thumb:"https://ik.imagekit.io/7cynulshf/IMG_20260413_171243.jpg?updatedAt=1776071764729"
   },
   {
     id:4,
-    title:"dua bocil imut nyoba ngewe",
-    src:"https://mxdrop.sx/e/03vzkjvgtko1l9e",
-    thumb:"https://ik.imagekit.io/7cynulshf/20260802_125408.jpg"
+    title:"bocil memek pink",
+    src:"https://www.youtube.com/embed/tgbNymZ7vqY",
+    thumb:"https://ik.imagekit.io/7cynulshf/IMG_20260413_205831.jpg?updatedAt=1776085358245"
   },
   {
     id:5,
-    title:"abg perawan di unboxing",
-    src:"https://mxdrop.sx/e/dkqrndpwa83r09",
-    thumb:"https://ik.imagekit.io/7cynulshf/20260802_130421.jpg?updatedAt=1785647164962"
+    title:"bocil memek pink",
+    src:"https://www.youtube.com/embed/tgbNymZ7vqY",
+    thumb:"https://ik.imagekit.io/7cynulshf/IMG_20260413_205831.jpg?updatedAt=1776085358245"
   },
   {
     id:6,
@@ -83,7 +83,7 @@ function render(){
   videos.slice(start,end).forEach(v=>{
     list.innerHTML+=`
       <div class="card" onclick="location.href='watch.html?id=${v.id}'">
-        <img src="${v.thumb}" loading="lazy">
+        <img src="${v.thumb}">
         <div class="title">${v.title}</div>
         <div class="views" id="views${v.id}">
           ${formatViews(getViews(v.id))}
@@ -92,18 +92,70 @@ function render(){
     `;
     increaseViews(v.id);
   });
+
+  renderPagination(); // ✅ WAJIB
 }
 
+/* PAGINATION FIX */
 function nextPage(){
-  page++;
-  render();
+  let totalPage = Math.ceil(videos.length / perPage);
+  if(page < totalPage){
+    page++;
+    render();
+  }
 }
 
 function prevPage(){
-  if(page>1){
+  if(page > 1){
     page--;
     render();
   }
+}
+
+function goPage(p){
+  page = p;
+  render();
+}
+
+function renderPagination(){
+  let totalPage = Math.ceil(videos.length / perPage);
+  let pag = document.getElementById("pagination");
+
+  if(!pag) return;
+
+  pag.innerHTML = "";
+
+  // PREV
+  pag.innerHTML += `
+    <button onclick="prevPage()" ${page === 1 ? "disabled" : ""}>
+      Prev
+    </button>
+  `;
+
+  // NOMOR
+  for(let i=1; i<=totalPage; i++){
+    pag.innerHTML += `
+      <button onclick="goPage(${i})"
+        style="
+          margin:5px;
+          padding:8px 12px;
+          background:${i===page ? 'red' : '#222'};
+          color:white;
+          border:none;
+          border-radius:6px;
+          cursor:pointer;
+        ">
+        ${i}
+      </button>
+    `;
+  }
+
+  // NEXT
+  pag.innerHTML += `
+    <button onclick="nextPage()" ${page === totalPage ? "disabled" : ""}>
+      Next
+    </button>
+  `;
 }
 
 /* SEARCH */
@@ -154,4 +206,5 @@ window.addEventListener("load", ()=>{
 document.body.style.opacity = 0;
 document.body.style.transition = "0.5s";
 
+/* INIT */
 render();
