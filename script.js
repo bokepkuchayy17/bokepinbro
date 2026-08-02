@@ -13,9 +13,9 @@ const videos = [
   },
   {
     id:3,
-    title:"bocil memek pink",
+    title:"bocil chindo polos tpi hyper",
     src:"https://www.youtube.com/embed/tgbNymZ7vqY",
-    thumb:"https://ik.imagekit.io/7cynulshf/IMG_20260413_171243.jpg?updatedAt=1776071764729"
+    thumb:"https://ik.imagekit.io/7cynulshf/20260802_122530.jpg"
   },
   {
     id:4,
