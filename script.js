@@ -1,15 +1,15 @@
 const videos = [
   {
     id:1,
-    title:"bocil sange di ewe pacar",
+    title:"pasrah aja di ewe gurunya",
     src:"https://mixdrop.top/e/z1pj89erinzlqq",
     thumb:"https://ik.imagekit.io/7cynulshf/20260801_142030.jpg"
   },
   {
     id:2,
-    title:"abg montok pink",
+    title:"main bertiga emang paling enak",
     src:"https://www.youtube.com/embed/3JZ_D3ELwOQ",
-    thumb:"https://ik.imagekit.io/7cynulshf/IMG_20260413_171315.jpg?updatedAt=1776071764733"
+    thumb:"https://ik.imagekit.io/7cynulshf/Screenshot_2026-08-02-10-52-43-25_99c04817c0de5652397fc8b56c3b3817.jpg"
   },
   {
     id:3,
