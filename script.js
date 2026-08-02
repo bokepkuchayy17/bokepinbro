@@ -31,9 +31,9 @@ const videos = [
   },
   {
     id:6,
-    title:"bocil memek pink",
-    src:"https://www.youtube.com/embed/tgbNymZ7vqY",
-    thumb:"https://ik.imagekit.io/7cynulshf/IMG_20260413_205831.jpg?updatedAt=1776085358245"
+    title:"part 2 bocil imut dua lawan satu ",
+    src:"https://mxdrop.sx/e/dkqrnd43hvz0v0",
+    thumb:"https://ik.imagekit.io/7cynulshf/20260802_225050.jpg"
   },
   {
     id:7,
