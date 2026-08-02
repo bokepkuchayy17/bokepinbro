@@ -274,4 +274,15 @@ button:hover{
     transform: translateY(0);
   }
 }
+
+  .ads-banner{
+  margin: 15px;
+  text-align: center;
+}
+
+.ads-banner img{
+  width: 100%;
+  max-height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
 }
