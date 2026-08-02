@@ -9,7 +9,7 @@ const videos = [
     id:2,
     title:"main bertiga emang paling enak",
     src:"https://tv1.indoav.app/e/bqDoEXoFUgSx",
-    thumb:"https://ik.imagekit.io/7cynulshf/Screenshot_2026-08-02-10-52-43-25_99c04817c0de5652397fc8b56c3b3817.jpg"
+    thumb:"https://ik.imagekit.io/7cynulshf/20260802_110017.jpg"
   },
   {
     id:3,
