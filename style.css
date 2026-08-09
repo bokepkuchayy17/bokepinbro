@@ -32,13 +32,6 @@ header h1{
   color:transparent;
 }
 
-  header h2{
-  font-size:15px;
-  background:linear-gradient(45deg,#ff0055,#ff7b00);
-  -webkit-background-clip:text;
-  color:transparent;
-}
-
 input{
   padding:8px 12px;
   border-radius:20px;
