@@ -5,8 +5,8 @@
 }
 
 body{
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg,#0f0f0f,#1a1a1a);
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#0f0f0f,#1a1a1a);
   color:#fff;
 }
 
@@ -18,14 +18,15 @@ header{
   padding:15px 20px;
   position:sticky;
   top:0;
-  backdrop-filter: blur(10px);
+  backdrop-filter:blur(10px);
   background:rgba(20,20,20,0.7);
   border-bottom:1px solid rgba(255,255,255,0.1);
   z-index:100;
+  flex-wrap:wrap;
 }
 
 header h1{
-  font-size:25px;
+  font-size:22px;
   background:linear-gradient(45deg,#ff0055,#ff7b00);
   -webkit-background-clip:text;
   color:transparent;
@@ -38,21 +39,38 @@ input{
   outline:none;
   background:#222;
   color:#fff;
-  transition:0.3s;
 }
 
 input:focus{
   background:#333;
 }
 
-/* GRID */
+/* GRID RESPONSIVE */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
-  gap:20px;
-  padding:20px;
+  gap:15px;
+  padding:15px;
 }
 
+@media(max-width:600px){
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(min-width:601px) and (max-width:1024px){
+  .grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+@media(min-width:1025px){
+  .grid{
+    grid-template-columns:repeat(6,1fr);
+  }
+}
+
+/* CARD */
 .card{
   cursor:pointer;
   transition:0.3s;
@@ -64,16 +82,13 @@ input:focus{
 
 .card img{
   width:100%;
-  border-radius:12px;
-  transition:0.3s;
-}
-
-.card:hover img{
-  filter:brightness(1.1);
+  height:140px;
+  object-fit:cover;
+  border-radius:10px;
 }
 
 .title{
-  font-size:14px;
+  font-size:13px;
   margin-top:6px;
 }
 
@@ -93,14 +108,12 @@ input:focus{
   flex:2;
 }
 
-/* VIDEO */
 .video-wrapper{
   position:relative;
   width:100%;
   padding-top:56.25%;
   border-radius:15px;
   overflow:hidden;
-  box-shadow:0 0 40px rgba(0,0,0,0.5);
 }
 
 .video-wrapper iframe{
@@ -111,7 +124,6 @@ input:focus{
   height:100%;
 }
 
-/* TITLE */
 #title{
   margin-top:12px;
   font-size:18px;
@@ -130,13 +142,11 @@ input:focus{
   gap:10px;
   padding:8px;
   border-radius:10px;
-  transition:0.3s;
   cursor:pointer;
 }
 
 .video-card:hover{
   background:rgba(255,255,255,0.05);
-  transform:scale(1.02);
 }
 
 .video-card img{
@@ -159,36 +169,19 @@ button{
   background:linear-gradient(45deg,#ff0055,#ff7b00);
   color:#fff;
   cursor:pointer;
-  transition:0.3s;
 }
 
-button:hover{
-  transform:scale(1.1);
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .watch-container{
-    flex-direction:column;
-  }
-
-  .sidebar{
-    flex-direction:row;
-    overflow-x:auto;
-  }
-
-  .video-card{
-    min-width:200px;
-  }
-
-  .seo-section{
-  color:#ccc;
+/* SEO SECTION (GLOBAL, BUKAN DI MOBILE!) */
+.seo-section{
   padding:20px;
+  border-top:1px solid #222;
   text-align:center;
+  color:#ccc;
 }
 
+.seo-section h1,
 .seo-section h2{
-  color:white;
+  color:#fff;
   margin-bottom:10px;
 }
 
@@ -199,10 +192,10 @@ button:hover{
 
 .seo-section ul{
   margin-top:15px;
-  text-align:left;
   max-width:400px;
   margin-left:auto;
   margin-right:auto;
+  text-align:left;
 }
 
 .seo-section li{
@@ -210,6 +203,7 @@ button:hover{
   font-size:14px;
 }
 
+/* FOOTER (GLOBAL) */
 .footer{
   border-top:1px solid #222;
   padding:20px;
@@ -237,40 +231,30 @@ button:hover{
 
 .copyright{
   font-size:12px;
-  }
-
-  .seo-section{
-  border-top:1px solid #222;
-  }
-
-  .seo-section {
-  padding: 15px;
-  border-top: 1px solid #222;
 }
 
-.seo-section h1 {
-  font-size: 15px;
-  font-weight: 500;
-  color: #ccc;
-  margin: 0;
+/* MOBILE FIX */
+@media(max-width:768px){
+
+  header{
+    flex-direction:column;
+    gap:10px;
   }
 
-  .seo-section h1 {
-  font-size: 15px;
-  font-weight: 500;
-  color: #aaa;
-  margin: 0;
-  letter-spacing: 0.5px;
-  animation: fadeIn 0.8s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
+  input{
+    width:100%;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .watch-container{
+    flex-direction:column;
+  }
+
+  .sidebar{
+    flex-direction:row;
+    overflow-x:auto;
+  }
+
+  .video-card{
+    min-width:200px;
   }
 }
