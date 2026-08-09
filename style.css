@@ -26,6 +26,13 @@ header{
 }
 
 header h1{
+  font-size:20px;
+  background:linear-gradient(45deg,#ff0055,#ff7b00);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+  header h2{
   font-size:15px;
   background:linear-gradient(45deg,#ff0055,#ff7b00);
   -webkit-background-clip:text;
