@@ -248,7 +248,7 @@ button{
   .watch-container{
     flex-direction:column;
   }
-}
+  
   .sidebar{
     flex-direction:row;
     overflow-x:auto;
