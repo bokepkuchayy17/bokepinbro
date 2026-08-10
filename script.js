@@ -8,9 +8,9 @@ const videos = [
   },
   {
     id:10,
-    title:"yang viral dua sejoli",
-    src:"https://mxdrop.sx/e/nl0x3mjnb1xo6l",
-    thumb:"https://ik.imagekit.io/lojojcfmt/IMG_20260810_182636.jpg"
+    title:"boc1l punya barang mulus bngettt",
+    src:"https://mxdrop.sx/e/z1ppjp64b3eomj",
+    thumb:"https://ik.imagekit.io/lojojcfmt/Screenshot_2026-08-10-20-40-52-859_com.miui.gallery.jpg?updatedAt=1786365807696"
   },
   {
     id:9,
