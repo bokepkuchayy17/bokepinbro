@@ -249,8 +249,9 @@ function handleClick(id){
 
 function goHome(){
   document.body.style.opacity = "0";
+
   setTimeout(()=>{
-    window.location.href = "/";
+    window.location.href = window.location.origin + "/bokepinbro/";
   }, 300);
 }
 
