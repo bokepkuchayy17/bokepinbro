@@ -100,7 +100,7 @@ if(pag) pag.innerHTML = "";
 
   filteredVideos.slice(start,end).forEach(v=>{
     list.innerHTML+=`
-      <div class="card" onclick="location.href='watch.html?id=${v.id}'">
+      <div class="card" onclick="handleClick(${v.id})">
         <img src="${v.thumb}">
         <div class="title">${v.title}</div>
         <div class="views" id="views${v.id}">
