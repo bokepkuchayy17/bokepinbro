@@ -89,7 +89,8 @@ function render(){
         Video tidak ditemukan bro
       </p>
     `;
-    document.getElementById("pagination").innerHTML = "";
+    let pag = document.getElementById("pagination");
+if(pag) pag.innerHTML = "";
   return;
   }
 
@@ -175,18 +176,24 @@ function renderPagination(){
 }
 
 /* SEARCH */
-let search=document.getElementById("search");
+let search = document.getElementById("search");
+
 if(search){
   search.addEventListener("input", ()=>{
-    let val=search.value.toLowerCase();
+    let val = search.value.toLowerCase();
 
-  filteredVideos = videos.filter(v =>
-    v.title.toLowerCase().includes(val)
-  );
+    if(val === ""){
+      // 🔥 BALIK KE SEMUA VIDEO
+      filteredVideos = [...videos];
+    } else {
+      filteredVideos = videos.filter(v =>
+        v.title.toLowerCase().includes(val)
+      );
+    }
 
-  page = 1; // 🔥 reset ke halaman 1
-  render();
-});
+    page = 1;
+    render();
+  });
 }
 
 /* WATCH */
