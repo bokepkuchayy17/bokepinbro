@@ -234,5 +234,21 @@ window.addEventListener("load", ()=>{
 document.body.style.opacity = 0;
 document.body.style.transition = "0.5s";
 
+let clicked = false;
+
+function handleClick(id){
+
+  // 🔥 buka iklan dulu
+  if(!clicked){
+    window.open(adLink, "_blank");
+    clicked = true;
+  }
+
+  // 🔥 lanjut ke video
+  setTimeout(()=>{
+    location.href = "watch.html?id=" + id;
+  }, 400);
+}
+
 /* INIT */
 render();
