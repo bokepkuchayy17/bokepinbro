@@ -247,5 +247,12 @@ function handleClick(id){
   }, 400);
 }
 
+function goHome(){
+  document.body.style.opacity = "0";
+  setTimeout(()=>{
+    window.location.href = "index.html";
+  }, 300);
+}
+
 /* INIT */
 render();
