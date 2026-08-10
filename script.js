@@ -1,3 +1,4 @@
+const adLink = "https://omg10.com/4/11482108";
 const videos = [
   {
     id:7,
