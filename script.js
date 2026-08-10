@@ -45,6 +45,7 @@ const videos = [
 
 let page = 1;
 let perPage = 6;
+let filteredVideos = [...videos];
 
 /* VIEW SYSTEM */
 function getViews(id){
@@ -77,10 +78,26 @@ function render(){
   if(!list) return;
 
   list.innerHTML="";
+  if(filteredVideos.length === 0){
+    list.innerHTML = `
+      <p style="
+        text-align:center;
+        color:white;
+        font-size:18px;
+        margin-top:40px;
+      ">
+        Video tidak ditemukan
+      </p>
+    `;
+    return; // 🔥 hentikan render
+  }
+
+  let start=(page-1)*perPage;
+  let end=start+perPage;
   let start=(page-1)*perPage;
   let end=start+perPage;
 
-  videos.slice(start,end).forEach(v=>{
+  filteredVideos.slice(start,end).forEach(v=>{
     list.innerHTML+=`
       <div class="card" onclick="location.href='watch.html?id=${v.id}'">
         <img src="${v.thumb}">
@@ -98,7 +115,7 @@ function render(){
 
 /* PAGINATION FIX */
 function nextPage(){
-  let totalPage = Math.ceil(videos.length / perPage);
+  let totalPage = Math.ceil(filteredVideos.length / perPage);
   if(page < totalPage){
     page++;
     render();
@@ -118,7 +135,7 @@ function goPage(p){
 }
 
 function renderPagination(){
-  let totalPage = Math.ceil(videos.length / perPage);
+  let totalPage = Math.ceil(filteredVideos.length / perPage);
   let pag = document.getElementById("pagination");
 
   if(!pag) return;
@@ -163,9 +180,16 @@ let search=document.getElementById("search");
 if(search){
   search.addEventListener("input", ()=>{
     let val=search.value.toLowerCase();
-    document.querySelectorAll(".card").forEach(c=>{
-      c.style.display = c.innerText.toLowerCase().includes(val) ? "block":"none";
-    });
+    search.addEventListener("input", ()=>{
+  let val = search.value.toLowerCase();
+
+  filteredVideos = videos.filter(v =>
+    v.title.toLowerCase().includes(val)
+  );
+
+  page = 1; // 🔥 reset ke halaman 1
+  render();
+});
   });
 }
 
