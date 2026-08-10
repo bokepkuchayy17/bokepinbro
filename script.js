@@ -95,8 +95,6 @@ function render(){
 
   let start=(page-1)*perPage;
   let end=start+perPage;
-  let start=(page-1)*perPage;
-  let end=start+perPage;
 
   filteredVideos.slice(start,end).forEach(v=>{
     list.innerHTML+=`
@@ -181,8 +179,6 @@ let search=document.getElementById("search");
 if(search){
   search.addEventListener("input", ()=>{
     let val=search.value.toLowerCase();
-    search.addEventListener("input", ()=>{
-  let val = search.value.toLowerCase();
 
   filteredVideos = videos.filter(v =>
     v.title.toLowerCase().includes(val)
@@ -191,7 +187,6 @@ if(search){
   page = 1; // 🔥 reset ke halaman 1
   render();
 });
-  });
 }
 
 /* WATCH */
