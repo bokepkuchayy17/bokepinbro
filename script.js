@@ -89,7 +89,8 @@ function render(){
         Video tidak ditemukan bro
       </p>
     `;
-    return; // 🔥 hentikan render
+    document.getElementById("pagination").innerHTML = "";
+  return;
   }
 
   let start=(page-1)*perPage;
