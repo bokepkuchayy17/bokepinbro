@@ -2,9 +2,9 @@ const adLink = "https://omg10.com/4/11482108";
 const videos = [
   {
     id:11,
-    title:"yang viral dua sejoli",
-    src:"https://mxdrop.sx/e/nl0x3mjnb1xo6l",
-    thumb:"https://ik.imagekit.io/lojojcfmt/IMG_20260810_182636.jpg"
+    title:"abis tiktokan lanjut ngewe aww",
+    src:"https://mxdrop.sx/e/r6ww9n4msoxk9e",
+    thumb:"https://ik.imagekit.io/lojojcfmt/Screenshot_2026-08-10-20-39-51-390_com.miui.gallery.jpg?updatedAt=1786365807853"
   },
   {
     id:10,
