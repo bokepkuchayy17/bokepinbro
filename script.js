@@ -86,7 +86,7 @@ function render(){
         font-size:18px;
         margin-top:40px;
       ">
-        Video tidak ditemukan
+        Video tidak ditemukan bro
       </p>
     `;
     return; // 🔥 hentikan render
