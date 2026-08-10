@@ -239,10 +239,7 @@ let clicked = false;
 function handleClick(id){
 
   // 🔥 buka iklan dulu
-  if(!clicked){
-    window.open(adLink, "_blank");
-    clicked = true;
-  }
+  window.open(adLink, "_blank");
 
   // 🔥 lanjut ke video
   setTimeout(()=>{
