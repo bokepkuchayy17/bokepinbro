@@ -214,14 +214,14 @@ if(id){
   videos.forEach(v=>{
     if(v.id!=id){
       sidebar.innerHTML+=`
-        <div class="video-card" onclick="location.href='watch.html?id=${v.id}'">
-          <img src="${v.thumb}" loading="lazy">
-          <div>
-            <div>${v.title}</div>
-            <div class="views">${formatViews(getViews(v.id))}</div>
-          </div>
-        </div>
-      `;
+  <div class="video-card" onclick="handleClick(${v.id})">
+    <img src="${v.thumb}" loading="lazy">
+    <div>
+      <div>${v.title}</div>
+      <div class="views">${formatViews(getViews(v.id))}</div>
+    </div>
+  </div>
+`;
     }
   });
 }
