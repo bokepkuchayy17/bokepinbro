@@ -86,7 +86,7 @@ function render(){
         font-size:18px;
         margin-top:40px;
       ">
-        Video tidak ditemukan bro
+        Video tidak ditemukan bro...
       </p>
     `;
     let pag = document.getElementById("pagination");
