@@ -2,9 +2,9 @@ const adLink = "https://omg10.com/4/11482108";
 const videos = [
   {
     id:13,
-    title:"abis tiktokan lanjut ngewe aww",
-    src:"https://mxdrop.sx/e/r6ww9n4msoxk9e",
-    thumb:"https://ik.imagekit.io/lojojcfmt/Screenshot_2026-08-10-20-39-51-390_com.miui.gallery.jpg?updatedAt=1786365807853"
+    title:"hoki banget dapat cewe model begini",
+    src:"https://mxdrop.sx/e/ow779pr1s1qmr6",
+    thumb:"https://ik.imagekit.io/lojojcfmt/Screenshot_2026-08-10-21-12-27-451_com.miui.gallery.jpg"
   },
   {
     id:12,
