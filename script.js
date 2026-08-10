@@ -1,5 +1,11 @@
 const adLink = "https://omg10.com/4/11482108";
 const videos = [
+    {
+    id:8,
+    title:"pasrah aja di ewe gurunya",
+    src:"https://mixdrop.top/e/z1pj89erinzlqq",
+    thumb:"https://ik.imagekit.io/lojojcfmt/IMG_20260810_182636.jpg"
+  },
   {
     id:7,
     title:"pasrah aja di ewe gurunya",
