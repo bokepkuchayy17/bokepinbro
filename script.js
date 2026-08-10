@@ -3,7 +3,7 @@ const videos = [
   {
     id:8,
     title:"yang viral dua sejoli",
-    src:"https://mixdrop.top/e/z1pj89erinzlqq",
+    src:"https://mxdrop.sx/e/nl0x3mjnb1xo6l",
     thumb:"https://ik.imagekit.io/lojojcfmt/IMG_20260810_182636.jpg"
   },
   {
