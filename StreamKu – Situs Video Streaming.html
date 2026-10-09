@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>StreamKu – Nonton Video Streaming</title>
+<style>
+:root{--bg:#fff;--fg:#111;--mut:#666;--card:#f4f4f5;--bd:#e4e4e7;--btn:#111;--btnfg:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#000;--fg:#f4f4f5;--mut:#a1a1aa;--card:#0b0b0c;--bd:#27272a;--btn:#fff;--btnfg:#111}}
+:root[data-theme="dark"]{--bg:#000;--fg:#f4f4f5;--mut:#a1a1aa;--card:#0b0b0c;--bd:#27272a;--btn:#fff;--btnfg:#111}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+button,input,summary{font:inherit;color:inherit}
+button{background:none;border:0;cursor:pointer}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;padding:14px 16px;border-bottom:1px solid var(--bd)}
+.logo{font-weight:800;font-size:26px;letter-spacing:-.5px;cursor:pointer}
+.search{display:flex;flex:1 1 240px;max-width:520px;border:1px solid var(--bd);border-radius:10px;overflow:hidden}
+.search input{flex:1;min-width:0;background:none;border:0;padding:10px 12px;outline:0}
+.search button{background:var(--btn);color:var(--btnfg);padding:0 18px;font-weight:600}
+.hr{display:flex;align-items:center;gap:6px;margin-left:auto;flex-wrap:wrap}
+.hr>button,.dd>summary{padding:8px 10px;border-radius:8px;list-style:none;cursor:pointer}
+.hr>button:hover,.dd>summary:hover,.tabs button:hover{background:var(--card)}
+.up{background:var(--btn)!important;color:var(--btnfg)}
+.dd{position:relative}.dd>summary::-webkit-details-marker{display:none}
+.menu{position:absolute;right:0;top:100%;z-index:5;min-width:160px;background:var(--bg);border:1px solid var(--bd);border-radius:10px;padding:6px;display:flex;flex-direction:column}
+.menu button{text-align:left;padding:8px 10px;border-radius:6px}.menu button:hover{background:var(--card)}
+.tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 10px;padding:10px 12px;border-bottom:1px solid var(--bd)}
+.tabs button{padding:10px 14px;border-radius:8px}
+.tabs .on{background:var(--card);font-weight:700;box-shadow:inset 0 -2px 0 var(--fg)}
+main{padding:12px 16px 24px;max-width:1200px;margin:0 auto}
+.hd{font-size:20px;font-weight:500;margin:8px 0 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;overflow:hidden;cursor:pointer}
+.th{aspect-ratio:16/9;display:grid;place-items:center;font-size:56px}
+.ct{padding:12px 14px}.tt{font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mt{display:flex;justify-content:space-between;margin-top:10px;color:var(--mut);font-size:14px}
+.pg{display:flex;justify-content:center;gap:8px;margin:22px 0}
+.pg button{min-width:44px;height:44px;border:1px solid var(--bd);border-radius:8px;background:var(--card)}
+.pg .on{background:var(--btn);color:var(--btnfg);font-weight:700}
+h1{font-size:22px;margin:6px 0 12px}.badge{font-size:13px;font-weight:400;background:var(--card);border:1px solid var(--bd);padding:3px 8px;border-radius:6px;vertical-align:middle}
+.player{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;display:grid;place-items:center}
+.big{font-size:clamp(64px,16vw,140px)}
+.play{position:absolute;width:72px;height:72px;border-radius:50%;background:rgba(0,0,0,.6);color:#fff;font-size:26px}
+.bar{position:absolute;left:0;right:0;bottom:0;height:5px;background:rgba(255,255,255,.3)}.bar i{display:block;height:100%;width:0;background:#f43f5e}
+.tm{position:absolute;left:12px;bottom:14px;color:#fff;font-size:13px;text-shadow:0 1px 3px #000}
+.acts{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0 10px}
+.acts button{border:1px solid var(--bd);border-radius:8px;padding:8px 12px}
+.mut{color:var(--mut)}h3{margin:22px 0 12px}
+.cm{display:flex;gap:8px;margin:10px 0}.cm input{flex:1;background:none;border:1px solid var(--bd);border-radius:8px;padding:10px}
+.cm button{background:var(--btn);color:var(--btnfg);border-radius:8px;padding:0 16px}
+.c1{padding:8px 0;border-bottom:1px solid var(--bd)}
+footer{border-top:1px solid var(--bd);padding:28px 16px;text-align:center;color:var(--mut)}
+footer ul{list-style:none;padding:0;margin:18px auto;max-width:480px;text-align:left;color:var(--fg)}footer li{margin:8px 0}
+.fl{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin:18px 0;color:var(--fg);font-weight:600}
+#toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--btn);color:var(--btnfg);padding:10px 16px;border-radius:8px;opacity:0;pointer-events:none;transition:opacity .2s;max-width:90%}
+#toast.on{opacity:1}
+</style></head><body>
+<header>
+<div class="logo" id="logo">Stream<span style="color:#f43f5e">Ku</span></div>
+<div class="search"><input id="q" placeholder="Cari judul video / nama kreator" aria-label="Cari video"><button id="sb">Search</button></div>
+<div class="hr"><button id="th" aria-label="Ganti tema">🌙</button><span id="ddc"></span><span id="ddg"></span><button class="up" id="up" aria-label="Unggah">⬆</button></div>
+</header>
+<nav class="tabs" id="tabs"></nav>
+<main id="main"></main>
+<footer>
+<p><b>StreamKu</b> adalah situs nonton video streaming gratis. Tonton tutorial, musik, vlog, dan film pendek berkualitas HD di satu tempat.</p>
+<ul><li>✔ Video baru setiap hari</li><li>✔ Streaming lancar tanpa buffering</li><li>✔ Beragam kategori dan genre</li><li>✔ Aman untuk seluruh keluarga</li></ul>
+<div class="fl"><span>Syarat &amp; Ketentuan</span><span>Kebijakan Privasi</span><span>Laporkan Konten</span><span>Hubungi Kami</span><span>Kebijakan Hak Cipta</span></div>
+<div>© 2026 StreamKu. Seluruh hak dilindungi.</div>
+</footer>
+<div id="toast"></div>
+<script>
+const V=[["Resep Nasi Goreng Kampung yang Praktis","Kuliner","Edukasi",12400,486,320,24,1,"🍳",25],["Cover Akustik Santai Sore Hari","Musik","Santai",8300,212,540,31,0,"🎸",210],["Vlog Akhir Pekan di Pantai","Vlog","Santai",5100,634,210,12,2,"🌅",30],["Belajar JavaScript untuk Pemula #1","Tutorial","Edukasi",21000,1120,980,88,3,"💻",215],["Film Pendek: Surat dari Ayah","Film","Inspiratif",33000,1480,1200,142,5,"🎬",280],["Review Gadget Terbaru Bulan Ini","Teknologi","Hiburan",9700,745,410,45,1,"📱",190],["Tips Berkebun di Lahan Sempit","Hobi","Edukasi",4200,398,175,9,6,"🌱",120],["Latihan Yoga 15 Menit Pagi Hari","Olahraga","Santai",15600,900,760,53,4,"🧘",160],["Dokumenter: Keindahan Terumbu Karang","Dokumenter","Inspiratif",27800,1860,1500,97,7,"🐠",195],["Tutorial Foto Bagus dengan HP","Tutorial","Edukasi",11300,552,640,36,2,"📷",45],["Podcast Santai: Cerita Perantau","Podcast","Santai",3900,2100,230,28,0,"🎙",260],["Stand-up Komedi Kampus","Komedi","Hiburan",18200,830,890,120,3,"🎤",340]];
+const D=V.map((a,i)=>({id:i,t:a[0],c:a[1],g:a[2],v:a[3],d:a[4],l:a[5],m:a[6],o:a[7],e:a[8],h:a[9],cm:[],liked:0}));
+const C=[...new Set(D.map(v=>v.c))],G=[...new Set(D.map(v=>v.g))];
+const TABS=[["trending","📈 Trending"],["terbaru","📄 Terbaru"],["dilihat","👁 Banyak Dilihat"],["disukai","♡ Disukai"],["komentar","💬 Banyak Dikomentari"],["durasi","⏱ Durasi Panjang"],["random","🔀 Random"]];
+const S={q:"",tab:"trending",c:"",g:"",p:1};let T;
+const $=i=>document.getElementById(i),esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const n=x=>x>=1000?(x/1000).toFixed(1).replace(".0","")+"k":x,dur=d=>Math.floor(d/60)+"m "+d%60+"s",clock=d=>Math.floor(d/60)+":"+String(d%60).padStart(2,"0");
+const bg=v=>`linear-gradient(135deg,hsl(${v.h} 60% 38%),hsl(${v.h+45} 70% 18%))`;
+const date=o=>{const d=new Date();d.setDate(d.getDate()-o);return d.toLocaleDateString("id-ID",{weekday:"long",day:"numeric",month:"long",year:"numeric"})};
+function toast(m){const t=$("toast");t.textContent=m;t.classList.add("on");clearTimeout(toast.k);toast.k=setTimeout(()=>t.classList.remove("on"),2200)}
+function dd(id,label,arr,k){$(id).innerHTML=`<details class="dd"><summary>${label} ▾</summary><div class="menu"><button data-${k}="">Semua</button>${arr.map(x=>`<button data-${k}="${x}">${x}</button>`).join("")}</div></details>`}
+function list(){const a=D.filter(v=>(!S.q||v.t.toLowerCase().includes(S.q.toLowerCase()))&&(!S.c||v.c===S.c)&&(!S.g||v.g===S.g));
+const k={trending:v=>v.v/(v.o+1),terbaru:v=>-v.o,dilihat:v=>v.v,disukai:v=>v.l,komentar:v=>v.m+v.cm.length,durasi:v=>v.d}[S.tab]||(v=>v.v);return a.sort((x,y)=>k(y)-k(x))}
+const card=v=>`<div class="card" data-id="${v.id}"><div class="th" style="background:${bg(v)}">${v.e}</div><div class="ct"><div class="tt">${v.t}</div><div class="mt"><span>👁 ${n(v.v)}</span><span>⏱ ${dur(v.d)}</span><span>♡ ${v.l}</span></div></div></div>`;
+function home(){const a=list(),P=Math.max(1,Math.ceil(a.length/6));S.p=Math.min(S.p,P);const s=a.slice((S.p-1)*6,S.p*6);
+const h=S.q?`Hasil pencarian dengan kata kunci <b>${esc(S.q)}</b> (${a.length} video)`:`Semua video${S.c?" · "+S.c:""}${S.g?" · "+S.g:""} (${a.length} video)`;
+let pg="";if(P>1){pg='<div class="pg"><button data-p="'+Math.max(1,S.p-1)+'">‹</button>';for(let i=1;i<=P;i++)pg+=`<button data-p="${i}" class="${i==S.p?"on":""}">${i}</button>`;pg+='<button data-p="'+Math.min(P,S.p+1)+'">›</button></div>'}
+return `<h2 class="hd">🔍 ${h}</h2>`+(s.length?`<div class="grid">${s.map(card).join("")}</div>`:'<p class="mut">Tidak ada video yang cocok. Coba kata kunci lain.</p>')+pg}
+function detail(v){const rel=D.filter(x=>x!==v).sort((a,b)=>b.v-a.v).slice(0,4);
+return `<h1>${v.t} <span class="badge">${Math.max(1,Math.round(v.d/60))} min</span></h1>
+<div class="player" style="background:${bg(v)}"><div class="big">${v.e}</div><button class="play" id="pb" aria-label="Putar">▶</button><span class="tm" id="tm">0:00 / ${clock(v.d)}</span><div class="bar"><i id="pgr"></i></div></div>
+<div class="acts"><span>👁 ${n(v.v+1)}</span><button id="lk">♡ <span id="lc">${v.l+v.liked}</span></button><button data-a="cm">💬 Comments (<span id="cc">${v.cm.length}</span>)</button><button data-a="dl">⬇ Download</button><button data-a="sh">🔗 Share</button><button data-a="rp">⚠ Report this video</button></div>
+<div class="mut">📅 ${date(v.o)}</div>
+<h3>Komentar</h3><div class="cm"><input id="ci" placeholder="Tulis komentar..." aria-label="Komentar"><button id="cb">Kirim</button></div><div id="cl">${v.cm.map(c=>`<div class="c1">${esc(c)}</div>`).join("")}</div>
+<h3>📈 Trending Now</h3><div class="grid">${rel.map(card).join("")}</div>`}
+function bind(v){let t=0,on=0;const pb=$("pb");pb.onclick=()=>{on=!on;pb.textContent=on?"❚❚":"▶";pb.style.opacity=on?.35:1;clearInterval(T);if(on)T=setInterval(()=>{t=Math.min(v.d,t+1);$("pgr").style.width=t/v.d*100+"%";$("tm").textContent=clock(t)+" / "+clock(v.d);if(t>=v.d){clearInterval(T);on=0;pb.textContent="▶";pb.style.opacity=1}},100)};
+$("lk").onclick=()=>{v.liked=v.liked?0:1;$("lc").textContent=v.l+v.liked};
+const add=()=>{const i=$("ci"),x=i.value.trim();if(!x)return;v.cm.unshift(x);i.value="";$("cl").innerHTML=v.cm.map(c=>`<div class="c1">${esc(c)}</div>`).join("");$("cc").textContent=v.cm.length};
+$("cb").onclick=add;$("ci").onkeydown=e=>{if(e.key==="Enter")add()}}
+function render(){clearInterval(T);const m=/^#v(\d+)$/.exec(location.hash),v=m&&D[m[1]];
+$("tabs").innerHTML=TABS.map(t=>`<button data-t="${t[0]}" class="${!v&&S.tab===t[0]?"on":""}">${t[1]}</button>`).join("");
+$("main").innerHTML=v?detail(v):home();if(v)bind(v);scrollTo(0,0)}
+const go=()=>location.hash?(location.hash="",0):render();
+const search=()=>{S.q=$("q").value.trim();S.p=1;location.hash?go():render()};
+$("sb").onclick=search;$("q").onkeydown=e=>{if(e.key==="Enter")search()};
+$("logo").onclick=()=>{S.q="";S.c="";S.g="";S.tab="trending";S.p=1;$("q").value="";go()};
+$("up").onclick=()=>toast("Fitur unggah akan aktif setelah backend terhubung.");
+$("th").onclick=()=>{const r=document.documentElement,d=r.dataset.theme==="dark"?"light":"dark";r.dataset.theme=d;$("th").textContent=d==="dark"?"🌙":"☀";try{localStorage.setItem("th",d)}catch(e){}};
+document.addEventListener("click",e=>{const x=e.target;
+document.querySelectorAll(".dd[open]").forEach(d=>{if(!d.contains(x))d.open=false});
+const el=s=>x.closest(s);let b;
+if(b=el("[data-id]")){location.hash="v"+b.dataset.id;return}
+if(b=el("[data-t]")){const t=b.dataset.t;if(t==="random"){location.hash="v"+Math.floor(Math.random()*D.length);return}S.tab=t;S.p=1;go();return}
+if(b=el("[data-p]")){S.p=+b.dataset.p;render();return}
+if(b=el("[data-c]")){S.c=b.dataset.c;S.p=1;document.querySelectorAll(".dd[open]").forEach(d=>d.open=false);go();return}
+if(b=el("[data-g]")){S.g=b.dataset.g;S.p=1;document.querySelectorAll(".dd[open]").forEach(d=>d.open=false);go();return}
+if(b=el("[data-a]")){const a=b.dataset.a;
+if(a==="cm")$("ci").focus();
+if(a==="dl")toast("Unduhan tersedia setelah file video asli terhubung.");
+if(a==="rp")toast("Terima kasih, laporan Anda sudah dicatat.");
+if(a==="sh"){let ok=0;try{navigator.clipboard.writeText(location.href).then(()=>toast("Tautan disalin."),()=>toast("Salin tautan dari address bar."));ok=1}catch(e){}if(!ok)toast("Salin tautan dari address bar.")}}});
+window.addEventListener("hashchange",render);
+let th="dark";try{th=localStorage.getItem("th")||"dark"}catch(e){}
+document.documentElement.dataset.theme=th;$("th").textContent=th==="dark"?"🌙":"☀";
+dd("ddc","📁 Kategori",C,"c");dd("ddg","🏷 Genre",G,"g");render();
+</script></body></html>
